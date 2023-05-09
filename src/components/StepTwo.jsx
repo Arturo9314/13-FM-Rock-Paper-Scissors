@@ -25,8 +25,8 @@ export default function StepTwo({modeGame, user, handleScore}) {
         <>
         <article className='container-game'>
             <h3 className='picked'>You Picked</h3>
-            <figure className={`${user}-btn circle play`}>
-                <div className='btn'>
+            <figure id='you-picked-container' className={`${user}-btn circle play ${winner==='You Win'? 'winner': ''}`}>
+                <div id='you-picked-circle' className='btn'>
                     <img src={icon} alt={user}/>
                 </div>
             </figure>
@@ -43,8 +43,8 @@ export default function StepTwo({modeGame, user, handleScore}) {
         <article className='container-game'>
             <h3 className='picked'>The House Picked</h3>
             {randomPlayer &&
-            <figure className={`${randomPlayer.name}-btn circle play`} >
-                <div className='btn'>
+            <figure id='house-picked-container' className={`${randomPlayer.name}-btn circle play ${winner==='You Lose'? 'winner': ''}`} >
+                <div id='house-picked-circle' className='btn'>
                     <img src={randomPlayer.icon} alt={randomPlayer.name}/>
                 </div>
             </figure>

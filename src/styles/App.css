@@ -64,15 +64,25 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 7px 7px 15px hsl(229, 25%, 11%), -7px -7px 15px var(--dark-text), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    transition: 0.5s ease-in-out;
+}
+.btn.nobtn:hover{
+    background-image: transparent;
+}
+.circle:hover{
+    transform: scale(0.);
+    box-shadow: 7px 7px 15px 6px var(--dark-text), -7px -7px 15px  var(--border), inset 0 -7rem 4px  #0fd850, inset 0 0 0 transparent;
 }
 .rock-btn {
     bottom: -42.5px;
     right: 42.5px;
-    background-image:  radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+	background-image: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
 }
+
 .rock-btn.triangle-type-btn{
     bottom: 0;
-    right: 36%;
+    right: 36%; 
 }
 .rock-btn>.btn:hover {
     background-image:  radial-gradient(hsl(349, 71%, 82%), hsl(349, 70%, 56%));
@@ -155,10 +165,12 @@ button{
     cursor: default;
 }
 
+
 .rock-btn.play,.paper-btn.play,.scissors-btn.play, .lizard-btn.play, .spock-btn.play{
     top: 0;
     left: 0;
 }
+
 .rock-btn.play>div>img,.paper-btn.play>div>img,.scissors-btn.play>div>img, .lizard-btn.play>div>img, .spock-btn.play>div>img{
     position: absolute;
     bottom: 45px;
@@ -210,6 +222,20 @@ button{
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
+
+.winner{
+    box-shadow: 7px 7px 15px 6px var(--dark-text), -7px -7px 15px  var(--border), inset 0 -7rem 4px  #0fd850, inset 0 0 0 transparent;
+}
+
+#you-picked-container:hover, #house-picked-container:hover{
+    transform: none;
+    box-shadow: 7px 7px 15px hsl(229, 25%, 11%), -7px -7px 15px var(--dark-text), inset 0 0 0 transparent, inset 0 0 0 transparent;
+}
+
+#you-picked-circle:hover, #house-picked-circle:hover{
+    background-image: none;
+}    
+
 :is(.page-content, .modal, .background){
     transition: 0.5s;
 }
@@ -273,15 +299,23 @@ body.open> .page-content{
 body.open .modal{
     animation: modal-in 1s both
 }
-.mode-btn.circle{
-    position: relative;
-    background-color: var(--border);
-    color: white;
+.mode-btn{
     cursor: pointer;
-}
- .mode-btn.circle:hover{
-    background-color: var(--dark-text);
+    width: 140px;
+    height: 140px;
+    padding: 1.3rem 1rem;
+    border: 3px solid var(--dark-text);
+    border-radius: 50%;
+    background: var(--dark-text);
     color: var(--border);
+    box-shadow: 7px 7px 15px hsl(229, 25%, 11%), -7px -7px 15px var(--dark-text), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    transition: 0.5s ease-in-out;
+}
+ .mode-btn:hover{
+    transform: scale(1.03);
+    color: var(--dark-text);
+    box-shadow: 7px 7px 15px 6px rgba(55, 55, 55, 0.2), -7px -7px 15px #ddd, inset 0 -5rem 4px var(--border), inset 0 0 0 transparent;
+    border-color: var(--border);
  }
 
 @keyframes rotate {
@@ -293,3 +327,17 @@ body.open .modal{
         transform: rotate(360deg);
     }
   }
+@media (max-width: 600px){
+    #root>header{
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        padding: 10px;
+    }
+    #board, #score{
+        scale: 0.6;
+    }
+    #mode{
+        flex-direction: column;
+    }
+}

@@ -9,8 +9,8 @@ export default function Mode({handleMode}) {
   }
   return (
     <section id='mode'>
-        <button onClick={handleClick} className='mode-btn circle'>Normal</button>
-        <button onClick={handleClick} className='mode-btn circle'>Extend</button>
+        <button onClick={handleClick} className='mode-btn'>Normal</button>
+        <button onClick={handleClick} className='mode-btn'>Extend</button>
     </section>
   )
 }
