@@ -314,7 +314,7 @@ body.open .modal{
  .mode-btn:hover{
     transform: scale(1.03);
     color: var(--dark-text);
-    box-shadow: 7px 7px 15px 6px rgba(55, 55, 55, 0.2), -7px -7px 15px #ddd, inset 0 -5rem 4px var(--border), inset 0 0 0 transparent;
+    box-shadow: 7px 7px 15px 6px rgba(55, 55, 55, 0.2), -7px -7px 15px #ddd, inset 0 -7rem 4px var(--border), inset 0 0 0 transparent;
     border-color: var(--border);
  }
 
@@ -334,7 +334,10 @@ body.open .modal{
         gap: 10px;
         padding: 10px;
     }
-    #board, #score{
+    #play-section{
+        flex-direction: column;
+    }
+    #board, #score, .play, #result>p, .picked{
         scale: 0.6;
     }
     #mode{
