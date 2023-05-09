@@ -71,7 +71,7 @@ ul{
     background-image: transparent;
 }
 .circle:hover{
-    transform: scale(0.);
+    transform: scale(0.95);
     box-shadow: 7px 7px 15px 6px var(--dark-text), -7px -7px 15px  var(--border), inset 0 -7rem 4px  #0fd850, inset 0 0 0 transparent;
 }
 .rock-btn {
@@ -234,7 +234,7 @@ button{
 
 #you-picked-circle:hover, #house-picked-circle:hover{
     background-image: none;
-}    
+}
 
 :is(.page-content, .modal, .background){
     transition: 0.5s;
