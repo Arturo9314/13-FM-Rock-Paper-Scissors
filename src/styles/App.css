@@ -50,11 +50,15 @@ ul{
     background-position: 50%;
     background-size: 100%;
 }
-.rotate{
-    animation-name: rotate;
+.pentagon-type.rotate{
+    animation-name: rotate-p;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-
+}
+.triangle-type.rotate{
+    animation-name: rotate-t;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 .circle{
     position: absolute;
@@ -165,7 +169,6 @@ button{
     cursor: default;
 }
 
-
 .rock-btn.play,.paper-btn.play,.scissors-btn.play, .lizard-btn.play, .spock-btn.play{
     top: 0;
     left: 0;
@@ -224,6 +227,7 @@ button{
 }
 
 .winner{
+    animation:jello-vertical .9s linear both;
     box-shadow: 7px 7px 15px 6px var(--dark-text), -7px -7px 15px  var(--border), inset 0 -7rem 4px  #0fd850, inset 0 0 0 transparent;
 }
 
@@ -267,25 +271,6 @@ button{
     color: var(--border);
     text-transform: uppercase;
 }
-@keyframes modal-in{
-    0%, 50%{
-        width: 130px;
-        height: 130px;
-        border-radius: 50%;
-    }
-    55%, 100%{
-        right: 50%;
-    }60%{
-        width: 400px;
-        height: 300px;
-        border-radius: 12px;
-    }75%{
-        translate: 50% -50%;
-    }
-}@keyframes modal-content-in{
-    0%,75%{ opacity: 0;}
-    85%, 100%{ opacity: 1;}
-}
 body.open .background{
     visibility: visible;
     opacity: 1;
@@ -311,14 +296,37 @@ body.open .modal{
     box-shadow: 7px 7px 15px hsl(229, 25%, 11%), -7px -7px 15px var(--dark-text), inset 0 0 0 transparent, inset 0 0 0 transparent;
     transition: 0.5s ease-in-out;
 }
- .mode-btn:hover{
+.mode-btn:hover{
     transform: scale(1.03);
     color: var(--dark-text);
     box-shadow: 7px 7px 15px 6px rgba(55, 55, 55, 0.2), -7px -7px 15px #ddd, inset 0 -7rem 4px var(--border), inset 0 0 0 transparent;
     border-color: var(--border);
- }
+}
 
-@keyframes rotate {
+@keyframes modal-in{
+    0%, 50%{
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+    }
+    55%, 100%{
+        right: 50%;
+    }60%{
+        width: 400px;
+        height: 300px;
+        border-radius: 12px;
+    }75%{
+        translate: 50% -50%;
+    }
+}
+
+@keyframes modal-content-in{
+    0%,75%{ opacity: 0;}
+    85%, 100%{ opacity: 1;}
+}
+
+
+@keyframes rotate-p {
     from {
         transform: rotate(0deg);
     }
@@ -326,7 +334,19 @@ body.open .modal{
         scale: 0.5;
         transform: rotate(360deg);
     }
-  }
+}
+
+@keyframes rotate-t {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes jello-vertical{0%{transform:scale3d(1,1,1)}30%{transform:scale3d(.75,1.25,1)}40%{transform:scale3d(1.25,.75,1)}50%{transform:scale3d(.85,1.15,1)}65%{transform:scale3d(1.05,.95,1)}75%{transform:scale3d(.95,1.05,1)}100%{transform:scale3d(1,1,1)}}
+
 @media (max-width: 600px){
     #root>header{
         flex-direction: column;
