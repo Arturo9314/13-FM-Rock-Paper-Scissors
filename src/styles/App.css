@@ -89,47 +89,47 @@ ul{
     right: 36%; 
 }
 .rock-btn>.btn:hover {
-    background-image:  radial-gradient(hsl(349, 71%, 82%), hsl(349, 70%, 56%));
+    background-image:  linear-gradient(hsl(349, 71%, 82%), hsl(349, 70%, 56%));
 }
 .paper-btn {
     top: 102.5px;
     right: -52.5px;
-    background-image: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    background-image: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
 }
 .paper-btn.triangle-type-btn{
     top: -40px;
     left: -40px;
 }
 .paper-btn>.btn:hover {
-    background-image:  radial-gradient(hsl(230, 89%, 82%), hsl(230, 89%, 85%));
+    background-image:  linear-gradient(hsl(230, 89%, 82%), hsl(230, 89%, 85%));
 }
 .scissors-btn {
     top: -42.5px;
     left: 182.5px;
-    background-image: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    background-image: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
 }
 .scissors-btn.triangle-type-btn{
     top: -40px;
     left: 380px;
 }
 .scissors-btn>.btn:hover {
-    background-image:  radial-gradient(hsl(39, 89%, 89%), hsl(40, 84%, 53%));
+    background-image:  linear-gradient(hsl(39, 89%, 89%), hsl(40, 84%, 53%));
 }
 .lizard-btn {
     bottom: -42.5px;
     left: 42.5px;
-    background-image: radial-gradient( hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+    background-image: linear-gradient( hsl(261, 73%, 60%), hsl(261, 72%, 63%));
 }
 .lizard-btn>.btn:hover {
-    background-image:  radial-gradient( hsl(261, 73%, 80%), hsl(261, 72%, 63%));
+    background-image:  linear-gradient( hsl(261, 73%, 80%), hsl(261, 72%, 63%));
 }
 .spock-btn {
     top: 102.5px;
     left: -52.5px;
-    background-image: radial-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+    background-image: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
 }
 .spock-btn>.btn:hover {
-    background-image: radial-gradient(hsl(189, 59%, 93%), hsl(189, 58%, 57%));
+    background-image: linear-gradient(hsl(189, 59%, 93%), hsl(189, 58%, 57%));
 }
 button{
     border: none;
